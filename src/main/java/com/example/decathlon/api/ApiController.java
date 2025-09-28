@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.*;
 
+@RequestMapping(value = "/api")
 @RestController
-@RequestMapping(value = "/com/example/decathlon/api")
 public class ApiController {
     private final CompetitionService comp;
 
