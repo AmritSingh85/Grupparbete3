@@ -5,17 +5,15 @@ import com.example.decathlon.dto.ScoreReq;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.*;
 
-@RequestMapping(value = "/api")
 @RestController
+@RequestMapping(value = "/api")
 public class ApiController {
     private final CompetitionService comp;
 
     public ApiController(CompetitionService comp) { this.comp = comp; }
-
 
     @PostMapping("/competitors")
     public ResponseEntity<?> add(@RequestBody Map<String,String> body) {
